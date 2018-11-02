@@ -4,7 +4,6 @@ class Solution:
         maxI = (2**31) - 1
         result = []
         firstChar = True
-        
        
         for i in range(len(str)):
             if(str[i] != ' ' and firstChar): # nonspace and firstChar
