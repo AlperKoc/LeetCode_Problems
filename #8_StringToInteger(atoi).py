@@ -5,9 +5,7 @@ class Solution:
         result = []
         firstChar = True
         
-        if len(str) == 0 or str == '+' or str == '-' or firstChar:
-            return 0
-        
+       
         for i in range(len(str)):
             if(str[i] != ' ' and firstChar): # nonspace and firstChar
                 if str[i] == '-' or str[i] == '+' or str[i].isdigit(): # +,- or digit
@@ -21,6 +19,8 @@ class Solution:
                     result.append(str[i])
                 else: # char
                     break
+        if len(str) == 0 or str == '+' or str == '-' or firstChar:
+            return 0
         
         if len(result) == 1 and (result[0] == '+' or result[0] == '-'):
             return 0
